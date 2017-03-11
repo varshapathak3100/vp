@@ -43,7 +43,7 @@ app.post('/send', function (req, res) {
     var smtpTransport = nodeMailer.createTransport(transport({
             service: 'Gmail',
             auth: {
-                user: 'spartaguidesjsu@gmail.com',
+                user: '<spartaguidesjsu@gmail.com>',
                 pass: 'spartaguide123'
             }
         })
