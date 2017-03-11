@@ -6,7 +6,8 @@ var express = require('express'),
     http = require('http'),
     sendmail = require('sendmail'),
     nodeMailer = require('nodemailer'),
-    bodyParser = require("body-parser");
+    bodyParser = require("body-parser"),
+    transport = require('nodemailer-smtp-transport');
 
 app.use(bodyParser.json());
 app.use("/node_modules", express.static('node_modules'));
@@ -39,13 +40,14 @@ app.post('/send', function (req, res) {
     var msg = req.body.msgVal;
     // console.log(msg + "varsha");
 
-    var smtpTransport = nodeMailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: 'spartaguidesjsu@gmail.com',
-            pass: 'spartaguide123'
-        }
-    });
+    var smtpTransport = nodeMailer.createTransport(transport({
+            service: 'Gmail',
+            auth: {
+                user: 'spartaguidesjsu@gmail.com',
+                pass: 'spartaguide123'
+            }
+        })
+    );
 
     smtpTransport.sendMail({  //email options
         from: "Gmail <spartaguidesjsu@gmail.com>", // sender address.  Must be the same as authenticated user if using Gmail.
