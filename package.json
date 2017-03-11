@@ -1,15 +1,19 @@
 {
-  "name": "project",
+  "name": "dummies2",
   "version": "1.0.0",
   "description": "Portfolio",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "cheerio": "latest",
     "express": "^4.14.0",
     "gmail-send": "^1.2.7",
+    "http": "0.0.0",
     "nodemailer": "^3.1.5",
-    "request": "^2.79.0",
+    "request": "^2.81.0",
+    "response": "^0.18.0",
     "sendmail": "^1.1.1",
+    "smtp-server": "^2.0.2",
     "table-scraper": "0.0.2"
   },
   "devDependencies": {},
