@@ -17,6 +17,7 @@ app.use('/home.html', express.static(__dirname + '/home.html'));
 app.use('/skills.html', express.static(__dirname + '/skills.html'));
 app.use('/projects.html', express.static(__dirname + '/projects.html'));
 app.use('/contact.html', express.static(__dirname + '/contact.html'));
+app.set('port', process.env.PORT || 3000);
 
 // var smtpTransport = nodeMailer.createTransport("SMTP", {
 //     service: "gmail",
@@ -65,6 +66,6 @@ app.post('/send', function (req, res) {
 
 });
 
-app.listen(3000);
+app.listen(app.get('port'));
 console.log("Server listening on port 3000");
 
