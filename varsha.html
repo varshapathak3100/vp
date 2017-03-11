@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Varsha Pathak</title>
+
+    <link rel="stylesheet" href="public/style_varsha.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <!--<script style="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="angular.js"></script>
+</head>
+
+<body ng-app="app">
+<div class="homeScreen">
+    <div class="container">
+        <h3 class="name">Varsha Pathak</h3><br>
+        <ul class="nav nav-tabs">
+            <li class="active" data-toggle="tooltip" title="Home" id="home">
+                <a href="#home" class="link"><span class="glyphicon glyphicon-home"></span></a></li>
+            <li data-toggle="tooltip" title="Skills" id="skills">
+                <a href="#skills" class="link"><span class="glyphicon glyphicon-education"></span></a>
+            </li>
+            <li data-toggle="tooltip" title="Projects" id="projects">
+                <a href="#projects" class="link"><span class="glyphicon glyphicon-briefcase"></span></a>
+            </li>
+            <li data-toggle="tooltip" title="Contact" id="contact">
+                <a href="#contact" class="link"><span class="glyphicon glyphicon-envelope"></span></a>
+            </li>
+        </ul>
+    </div>
+    <div ng-view></div>
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        $('[data-toggle="tooltip"]').tooltip();
+
+        $('#home').click(function () {
+            $("#skills").removeClass("active");
+            $("#projects").removeClass("active");
+            $("#contact").removeClass("active");
+            $("#home").addClass("active");
+        });
+
+        $('#skills').click(function () {
+            $("#home").removeClass("active");
+            $("#skills").addClass("active");
+            $("#projects").removeClass("active");
+            $("#contact").removeClass("active");
+        });
+
+        $('#projects').click(function () {
+            $("#home").removeClass("active");
+            $("#projects").addClass("active");
+            $("#skills").removeClass("active");
+            $("#contact").removeClass("active");
+        });
+
+        $('#contact').click(function () {
+            $("#home").removeClass("active");
+            $("#contact").addClass("active");
+            $("#skills").removeClass("active");
+            $("#projects").removeClass("active");
+        });
+
+    });
+</script>
+</body>
+</html>
