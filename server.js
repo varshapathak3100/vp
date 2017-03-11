@@ -44,11 +44,11 @@ app.post('/send', function (req, res) {
         auth: {
             user: 'spartaguidesjsu@gmail.com',
             pass: 'spartaguide123'
-        },
+        }
     });
 
     smtpTransport.sendMail({  //email options
-        from: "<spartaguidesjsu@gmail.com>", // sender address.  Must be the same as authenticated user if using Gmail.
+        from: "Gmail <spartaguidesjsu@gmail.com>", // sender address.  Must be the same as authenticated user if using Gmail.
         to: "varshapathak3100@gmail.com", // receiver
         subject: "Portfolio Message", // subject
         text: msg // body
