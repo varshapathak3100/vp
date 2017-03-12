@@ -44,7 +44,7 @@ app.post('/send', function (req, res) {
             service: 'Gmail',
             auth: {
                 user: '<spartaguidesjsu@gmail.com>',
-                pass: '<spartaguide123>'
+                pass: 'spartaguide123'
             }
         })
     );
