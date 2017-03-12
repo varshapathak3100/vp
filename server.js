@@ -43,15 +43,15 @@ app.post('/send', function (req, res) {
     var smtpTransport = nodeMailer.createTransport(transport({
             service: 'Gmail',
             auth: {
-                user: '<spartaguidesjsu@gmail.com>',
+                user: 'spartaguidesjsu@gmail.com',
                 pass: 'spartaguide123'
             }
         })
     );
 
     smtpTransport.sendMail({  //email options
-        from: "<spartaguidesjsu@gmail.com>", // sender address.  Must be the same as authenticated user if using Gmail.
-        to: "<varshapathak3100@gmail.com>", // receiver
+        from: "spartaguidesjsu@gmail.com", // sender address.  Must be the same as authenticated user if using Gmail.
+        to: "varshapathak3100@gmail.com", // receiver
         subject: "Portfolio Message", // subject
         text: msg // body
     }, function(error, response){  //callback
