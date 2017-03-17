@@ -60,7 +60,7 @@ html, body, .container-fluid, row {
     height: 100%;
     display: block;
     width: 100%;
-    background: url("images/lamp3.jpg") center;
+    background: #003366 url("images/lamp3.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -175,7 +175,7 @@ html, body, .container-fluid, row {
 .msgArea {
     margin-top: 5%;
     height: 250px;
-    width: 700px;
+    width: 70%;
     padding: 1%;
 }
 
