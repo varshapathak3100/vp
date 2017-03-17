@@ -54,13 +54,14 @@ html, body, .container-fluid, row {
     height: 100%;
     width: 100%;
     font-family: "Comic Sans MS";
+    background-color: #003366;
 }
 
 .homeScreen {
     height: 100%;
     display: block;
     width: 100%;
-    background: #003366 url("images/lamp3.jpg") center;
+    background: url("images/lamp3.jpg") center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
